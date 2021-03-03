@@ -256,7 +256,7 @@
 </head>
 <body>
 	<div class="container" id="container">
-		222
+		push
 		<div class="music">
 			<div class="photo">
 				<div class="photo_pic" id="photo_pic"><div class="cd"></div></div>
@@ -328,7 +328,7 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 		var list_item=list_con.getElementsByTagName("p");
 		var songIndex=0;
 		var container=document.getElementById("container");
-		var obj;		
+		var obj;
 		function config()
 		{
 			this.play_mark=true;
@@ -344,10 +344,10 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 			this.endicon1=icon1.innerHTML;
 			this.endicon2="&#xe674;";
 		}
-		
+
 		obj= new config();
 		//列表控制
-		
+
 		var allSong="";
 		for(var song=0;song<lyric.length;song++)
 		{
@@ -393,7 +393,7 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				{songIndex=0}
 			else if(songIndex<0)
 				{songIndex=lyric.length}
-			obj= new config();		
+			obj= new config();
 			iconinit();
 			audioInit();
 			playedTime();
@@ -408,7 +408,7 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 			vol_cube.style.left=audio.volume*vol_bar.offsetWidth+"px";
 			lyric_tit.innerText=lyric[songIndex].name;
 			photo_pic.style.background="url("+lyric[songIndex].img+")";
-			audio.src=lyric[songIndex].audio_src;			
+			audio.src=lyric[songIndex].audio_src;
 			progress_cube.style.left=0;
 		}
 		audioInit();
@@ -433,7 +433,7 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 					lyric_p[i].index=i;
 				}
 			if(document.getElementById("lyric"+id_num))
-			{				
+			{
 				var obj=document.getElementById("lyric"+id_num);
 				for(var i=0;i<obj.index;i++)
 				{
@@ -443,8 +443,8 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				{
 					lyric_p[j].className="";
 				}
-				obj.className="yellow active";				
-				lyric_txt.style.top=lyric_con.offsetHeight/2-obj.offsetTop+"px";			
+				obj.className="yellow active";
+				lyric_txt.style.top=lyric_con.offsetHeight/2-obj.offsetTop+"px";
 			}
 		}
 		function format(time)
@@ -517,7 +517,7 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				document.onmousemove=null;
 				vol_cube.onmousemove=null;
 			}
-		}		
+		}
 		//点击播放
 		play_btn.onclick=function()
 		{
@@ -550,14 +550,14 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				var time=arr[0].split(",");
 				var temp2=time[0].split(".");
 				var ms=temp2[1];//毫秒
-				var temp3=temp2[0].split(":");			
+				var temp3=temp2[0].split(":");
 				var s=temp3[1];//秒
 				var m=temp3[0];//分
 				var s_sum=parseInt(m*60)+parseInt(s);
 				if(text)
 				{
 					html+="<p id='lyric"+s_sum+"'>"+text+"</p>";
-				}	
+				}
 			}
 			lyric_txt.innerHTML=html;
 		}
@@ -578,10 +578,10 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				this.style.color="yellow";
 				this.className="icon yellow";
 			}
-			else{ 
+			else{
 				this.innerHTML=obj.icon2;
-				this.style.color="#fff";	
-				this.className="icon";			
+				this.style.color="#fff";
+				this.className="icon";
 			}
 		}
 		icon1.onclick=function()
@@ -592,10 +592,10 @@ var lyric=[{'name':"笑忘书",'img':'img/photo1.jpg','audio_src':'song/王菲-�
 				this.style.color="#f7759f";
 				this.className="icon pink";
 			}
-			else{ 
+			else{
 				this.innerHTML=obj.icon1;
-				this.style.color=obj.icon1_co;	
-				this.className="icon";			
+				this.style.color=obj.icon1_co;
+				this.className="icon";
 			}
 		}
 	}
